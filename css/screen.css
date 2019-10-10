@@ -71,6 +71,10 @@
     --global-input-focus-borderColor: var(--global-color-alpha);
     --global-input-focus-boxShadowColor: var(--global-color-alpha-x-transparent);
     --global-input-focus-boxShadow: 0 0 0 3px var(--global-input-focus-boxShadowColor);
+
+    /*password toggle settings*/
+    --global-password-toggle-spacing: calc(var(--global-baseline) * 1.75);
+    --global-password-toggle-size: calc(var(--global-baseline) * 2.5);
 }
 
 /*------------------------------------*\
@@ -822,6 +826,24 @@ more padding on the right to avoid overlap
 .c-password-toggle-container
 {
     position: relative;
+    display: block;
+}
+
+.c-password-toggle
+{
+    position: absolute;
+    display: block;
+    top: var(--global-password-toggle-spacing);
+    bottom: var(--global-password-toggle-spacing);
+    right: var(--global-passwoer-toggle-spacing);
+    background: red;
+    width: var(--global-password-toggle-size);
+    height: var(--global-password-toggle-size);
+}
+
+.c-password-toggle__symbol
+{
+    fill: var(--global-color-neutral-x-light);
 }
 
 .c-custom-toggle-list {
