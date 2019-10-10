@@ -17,8 +17,8 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/screen.css">
-        <script src="scripts\passwordToggle.js">
-        </script>
+        <script src="scripts\passwordToggle.js"></script>
+        <script src="./scripts/validation.js"></script>
     </head>
     <body>
         <section class="o-row o-row--lg o-row--login">
@@ -35,18 +35,24 @@
                         <h2 class="c-card__title">
                             Sign in to your account
                         </h2>
-                        <p class="c-form-field">
+                        <p class="c-form-field js-username-field">
                             <label class="c-label" for="username">
-                                Email address                                
+                                Email address
+                                <span class="c-label__error-message js-username-error-message">
+                                    this field is required!!!
+                                </span>                               
                             </label>
-                            <input class="c-input" type="email" name="username" id="username" placeholder="e.g. john@doe.com" required>
+                            <input class="c-input js-username-input" type="email" name="username" id="username" placeholder="e.g. john@doe.com" required>
                         </p>
-                        <p class="c-form-field">
-                            <label class="c-label" for="password">
-								Password								
+                        <p class="c-form-field js-password-field js-password-field">
+                            <label class="c-label js-password" for="password">
+                                Password
+                                <span class="c-label__error-message js-password-error-message">
+                                    this field is required!!!
+                                </span>
                             </label>
                             <span class="c-password-toggle-container">
-                                <input class="c-input js-password-input" type="password" name="password" id="password" required>
+                                <input class="c-input js-password js-password-input" type="password" name="password" id="password" required>
                                 <span class="c-password-toggle">
                                     <input type="checkbox" class="c-password-toggle__checkbox o-hide-accessible js-password-toggle" id="passwordToggle">
                                     <label for="passwordToggle" class="c-password-toggle__label">
