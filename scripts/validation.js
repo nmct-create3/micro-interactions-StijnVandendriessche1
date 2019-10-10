@@ -14,7 +14,18 @@ const isEmpty = function (fieldValue) {
 
 const enablelListeners = function() 
 {
-      
+    email.input.addEventListener('blur', function(e) 
+    {
+        console.log(e.target.value); 
+    });
+    password.input.addEventListener('blur', function(e) 
+    {
+        console.log(e.target.value); 
+    });
+    signInButton.addEventListener('click', function(e) 
+    {
+        console.log('Clicked the button'); 
+    });
 };
 
 const getDOMElements = function() 
