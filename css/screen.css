@@ -819,6 +819,11 @@ more padding on the right to avoid overlap
     Visually change a checkbox into a toggle
 */
 
+.c-password-toggle-container
+{
+    position: relative;
+}
+
 .c-custom-toggle-list {
     --toggle-list-borderColor: var(--global-color-neutral-xxx-light);
     margin-bottom: var(--global-whitespace);
